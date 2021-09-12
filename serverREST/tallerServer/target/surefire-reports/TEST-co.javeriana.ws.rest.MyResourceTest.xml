@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="co.javeriana.ws.rest.MyResourceTest" time="1.083" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="co.javeriana.ws.rest.MyResourceTest" time="2.748" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="16.0.2+7"/>
@@ -55,5 +55,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="co.javeriana.ws.rest.MyResourceTest" name="testGetIt" time="1.083"/>
+  <testcase classname="co.javeriana.ws.rest.MyResourceTest" name="testGetIt" time="2.748"/>
 </testsuite>
