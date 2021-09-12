@@ -1,0 +1,41 @@
+package client;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Invocation;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.GenericType;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import entities.Trip;
+
+public class RestClientMain {
+	public static final String MY_SERVER_URL="http://localhost:8080/myapp/";
+	RESTCOUNTRIES_SERVER_URL="http://restcountries.eu/rest/v2/";
+	public static void main(String[] args) {
+		/*Client client = ClientBuilder.newClient();
+		WebTarget webTarget = client.target(MY_SERVER_URL);
+		WebTarget rootWebTarget = webTarget.path("myresource/trips");
+		Invocation.Builder invocationBuilder = rootWebTarget.request(MediaType.APPLICATION_JSON);
+		Response response = invocationBuilder.get();
+		List<Trip> trips= response.readEntity(new GenericType<List<Trip>>() {});
+		for (Trip trip : trips) {
+			System.out.println(trip);
+		}*/
+		Client client = ClientBuilder.newClient();
+		WebTarget webTarget =
+		client.target(RESTCOUNTRIES_SERVER_URL);
+		WebTarget helloWebTarget = webTarget
+		.path("currency/jpy")
+		.queryParam("fields", "name", "capital");
+		Invocation.Builder invocationBuilder =
+		helloWebTarget.request(MediaType.APPLICATION_JSON);
+		Response response = invocationBuilder.get();
+		String respuestaTexto = response.readEntity(String.class);
+		System.out.println("Content: "+respuestaTexto);
+	}
+}

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tallerServer:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>tallerServer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="tallerServer-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="tallerServer:war exploded" />
+    </root>
+  </artifact>
+</component>

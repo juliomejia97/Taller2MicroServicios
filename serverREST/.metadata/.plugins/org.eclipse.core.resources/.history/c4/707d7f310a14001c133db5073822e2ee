@@ -1,0 +1,32 @@
+package client;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Invocation;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import com.google.gson.Gson;
+
+import entities.Trip;
+
+public class RestClientMain {
+	public static final String MY_SERVER_URL="http://localhost:8080/myapp/";
+	
+	public static void main(String[] args) {
+		Client client = ClientBuilder.newClient();
+		WebTarget webTarget = client.target(MY_SERVER_URL);
+		WebTarget rootWebTarget = webTarget.path("myresource/trips");
+		Invocation.Builder invocationBuilder = rootWebTarget.request(MediaType.APPLICATION_JSON);
+		Response response = invocationBuilder.get();
+		System.out.println(response);
+		List<Trip> trips = Arrays.asList(new Gson().fromJson(response.getEntity(), Trip[].class));
+		for (Trip trip : trips) {
+			System.out.println(trip);
+		}
+	}
+}

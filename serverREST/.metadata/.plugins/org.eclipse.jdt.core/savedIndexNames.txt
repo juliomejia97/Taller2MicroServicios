@@ -1,0 +1,21 @@
+INDEX VERSION 1.131+/home/juliom/Documentos/11avo Semestre/Microservicios y Cloud/Taller 2/serverREST/.metadata/.plugins/org.eclipse.jdt.core
+2301544305.index
+4032897351.index
+534075740.index
+3725866262.index
+2079053082.index
+1721025084.index
+4191957070.index
+1544561064.index
+4099486094.index
+1513209858.index
+3813455974.index
+1133458043.index
+3921492860.index
+3770449578.index
+628430160.index
+286175018.index
+1763772657.index
+3301987994.index
+428615166.index
+204811579.index
